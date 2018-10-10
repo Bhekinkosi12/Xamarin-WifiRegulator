@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Timer.Views.Set_Time"
+             Title="Wifi Regulator"
+              x:Name="Set_time"
+             BackgroundColor="White">
+    <ContentPage.Content>
+
+        <StackLayout>
+            <StackLayout Padding="40" VerticalOptions="Center" HorizontalOptions="Center" Orientation="Horizontal">
+                <Picker Title="Select Time"  x:Name="TimePicked"  HorizontalOptions="Fill"  TextColor="Red">
+                    <Picker.Items>
+                        <x:String >5 Minutes</x:String>
+                        <x:String >10 Minutes</x:String>
+                        <x:String >15 Minutes</x:String>
+                    </Picker.Items>
+                </Picker>
+             </StackLayout>           
+                   <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand" Padding="30">
+
+                <Button x:Name="SetButton" Image="redbutton.png"   Released="Button_Released" Clicked = "Button_Click" WidthRequest="90" HeightRequest="100" Pressed="SetButton_Pressed"  />
+                   </StackLayout>
+           
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
