@@ -2,6 +2,7 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Wifi.Interfaces;
+using System.RunTime;
 
 namespace Timer.Views
 {
@@ -18,9 +19,13 @@ namespace Timer.Views
         {
            string Time_Chosen = TimePicked.SelectedItem.ToString();
             Time_Chosen = Time_Chosen.Substring(0, Time_Chosen.LastIndexOf(' '));
+            
+            if(Int32.TryParse(Time_Chosen) == true){
+            
             int number = Int32.Parse(Time_Chosen);
             DependencyService.Get<IWIFI_INT>().Switchwifi(number);
 
+            }
         }
 
         private void Button_Released(object sender, EventArgs e)
